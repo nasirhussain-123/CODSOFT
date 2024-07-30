@@ -1,0 +1,2 @@
+1)website par kahi apne aap kuch likha aata hai aur wo apne aap change hote rahta hai uske liye
+1st:- go to the typed.js-->github-->copy the script file-->and inluce in html files.
