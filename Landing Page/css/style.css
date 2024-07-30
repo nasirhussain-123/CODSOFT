@@ -1,0 +1,516 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ############### html element styling ####################### */
+
+html{
+  font-size: 62.5%;
+  /* font-size: : 10px;
+  16px --- 100%
+  10px --- (100/16)*10= 62.5% */
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+}
+
+ul li{
+  list-style: none;
+}
+
+a{
+  /* it is equal to 16px */
+  font-size: 1.6rem; 
+  text-decoration: none;
+}
+
+p, li{
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.15em;
+  /* yha 0.5 em ka matlab hai agar font size 1.6rem means 16px ka hi to uska adha margin-bottom ho jayega means 8px */
+}
+
+h1, h2, h3{
+  margin-bottom: 0.5em;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+
+
+/* ===================>>> utility classes <<<============================== */
+
+.container{
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+.lg-heading{
+  font-size: 3.5rem;
+}
+
+.md-heading{
+  font-size: 2.2rem;
+}
+
+.text-red{
+  color: #e63946;
+}
+
+.text-light{
+  color: #f4f4f4;
+}
+
+.text-black{
+  color: #333;
+}
+
+.text-gray{
+  color: #555;
+}
+
+.bg-dark{
+  background-color: #263238;
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: -0.5em 0;
+}
+
+.btn-primary{
+  background-color: white;
+  border-radius: 10em;
+  margin-top: 5px;
+}
+
+.btn-primary:hover{
+  background-color: #ddd;
+}
+
+.btn-secondary{
+  border: 2px solid #e63946;
+  border-radius: 1.5em;
+  color: #e63946;
+  background: #fff;
+}
+
+
+.btn-secondary:hover{
+  background-color: #fcf3f2;
+}
+
+/* ################ header styling ###################### */
+
+.header{
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/header-image.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.navbar .logo{
+  float: left;
+}
+/* this is very useful property when we use float property and thing are not in manner then we use it.*/
+
+.navbar .nav-items{
+  float: right;
+  margin-top: 1rem;
+}
+
+.navbar .nav-item{
+  display: inline-block;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+
+.navbar a:link,
+.navbar a:visited{
+  color: #f4f4f4;
+}
+
+
+.navbar a{
+  padding-bottom: 0.3rem;  
+}
+
+.navbar a:hover{
+  border-bottom: 1px solid #fff;
+}
+
+.navbar::after{
+  content: '';
+  display: block; 
+  clear: both;
+}
+
+/* ########## header content styling ################## */
+
+.header-content{
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(rgba(0,0,0,0.2));
+}
+
+.header-content h1{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.header-content p{
+  text-transform: uppercase;
+}
+
+
+/* ########################### SHOWCASE SECTION STYLING ############################### */
+.showcase{
+   background: #ddd;
+   padding: 10rem 0;
+}
+
+
+.row{
+  height: 350px;
+  background: #fff;
+  box-shadow: 0px 0px 20px 0px #aaa;
+}
+
+.row1{
+  margin-bottom: 10rem;
+}
+
+
+.row1 .img-box, .row2 .text-box{
+  float: left;
+  width: 50%;
+}
+
+.row2 .img-box, .row1 .text-box{
+  float: right;
+  width: 50%;
+}
+
+.row .img-box{
+  height: 100%;
+}
+
+.row .text-box{
+  padding: 3rem;
+}
+
+.row .img-box img{
+  display: inline-block;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.row::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* ###################### features section styling ######################### */
+
+.features{
+  padding: 10rem 0;
+}
+
+.box-wrapper{
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.462);
+}
+
+.box{
+  width: 33.333333333333%;
+  float: left;
+  padding: 2rem;
+  text-align: center;
+}
+
+.box-1, .box-3{
+  background-color: #263238;
+  color: #fff;
+}
+
+.box-2{
+  /* background-color: linear-gradient(25deg,#d64c7f,#ee4758 50%); */
+  background-color: rgba(215, 55, 55, 0.838);
+  color: #fff;
+}
+.box-wrapper::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ################ footer styling ######################## */
+
+.footer{
+  background-color: #263238;
+  color: #f4f4f4;
+  padding: 2rem;
+  text-align: center;
+
+}
+
+
+/* ########################### ABOUT PAGE STYLING #################### */
+.about{
+  padding: 5rem 0;
+}
+
+.container>h2{
+  border-bottom: 6px solid #e63946
+}
+
+
+/* ---------------------- about wrapper styling ------------------------ */
+.about-wrapper{
+  text-align: center;
+  margin-top: 2rem;;
+}
+.about-wrapper .left{
+  float: left;
+  width: 50%;
+}
+
+.about-wrapper .right{
+  float: right;
+  width: 50%;
+}
+
+
+.about-wrapper::after{
+  content: '';
+  display: block; 
+  clear: both;
+}
+
+.about-wrapper li::before{
+  content: '\2713';
+  color: #e63946;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+
+/* ------------- travel details --------------- */
+
+.travel-details{
+  margin-top: 3rem;
+}
+
+.count-item{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e63946;
+}
+
+.box-items{
+  float: left;
+  width: 25%;
+}
+
+.box-items p{
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+
+
+.box-items::after{
+  content: '';
+  display: block;
+  clear: both;
+
+}
+
+
+
+/* ##################### banner styling ###################### */
+
+.cta-banner{
+  background: linear-gradient(25deg,#d64c7f,#ee4758 50%);
+  color: #f4f4f4;
+  padding: 0.5rem;
+  box-shadow: 5px 5px 10px #00000057;
+  margin-top: 15rem;
+}
+
+.cta-left{
+  width: 60%;
+  float: left;
+
+}
+
+.cta-line{
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.btn-cta{
+  text-align: center;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border: 4px solid white;
+  padding: 0.3rem 2.5em;
+  letter-spacing: 0.5rem;
+  color: #f4f4f4;
+  margin-top: 0.7rem;
+}
+
+.btn-cta:hover{
+  color: rgb(18, 49, 52);
+}
+
+.cta-right{
+  width: 40%;
+  float: right;
+  text-align: right;
+}
+
+.cta-banner::after{
+  content: '';
+  display: block;
+  clear: both;
+
+}
+
+
+/* ################ contact tyling ######################## */
+.contact-form{
+  padding: 2rem 0;
+  background: #ffffff;
+}
+
+.form-wrapper .company-address{
+  height: 600px;
+  width: 49%;
+  float: left;
+}
+
+.form-wrapper .company-address i{
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.form-wrapper .company-address h2{
+  display: inline-block;
+ text-transform: uppercase;
+}
+
+.form-wrapper .address-group{
+  margin-bottom: 1rem;
+}
+
+
+.form-wrapper .address-group img{
+  margin-top: 20px;
+  max-width: 90%;
+  height: 300px;
+  object-fit: cover;
+  object-position: right;
+}
+
+.form-wrapper::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ######################### FORM STYLING ############################## */
+.heading{
+  font-size: 20px;
+}
+
+.form>p{
+  line-height: 25px;
+  font-size: 1.5rem;
+}
+.form>h1{
+  font-size: 3rem;
+}
+.address-group>p{
+  font-size: 15px;
+  line-height: 20px;
+}
+.location{
+  margin-top: 10px;
+}
+
+.form-wrapper .form{
+  height: 600px;
+  font-size: 1.6rem;
+  width: 49%;
+  float: right;
+}
+
+.form h1::after{
+  content: '';
+  display: block;
+  border: 3px solid #ee4758;
+  width: 100%;
+}
+
+.form-wrapper .form input{
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form-wrapper .form .form-group{
+  margin-bottom: 1rem;
+}
+
+.form-wrapper .form label::after{
+  content: '* ';
+  color: #e63946;
+}
+
+.form-wrapper .form textarea{
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+}
+
+.form-btn{
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 2em;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-color: #e63946;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+label{
+  font-size: 15px;
+}
+
+
+
+
+
+
